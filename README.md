@@ -73,6 +73,7 @@ return Center(
 );
 ```
 > `Step-4` : Deklarasi `variabel` dan `fungsi` klik Button Hitung
+
 ```dart
 class _MyAppState extends State<MyApp> {
   final txtpanjang = TextEditingController();
@@ -94,8 +95,10 @@ class _MyAppState extends State<MyApp> {
 ```
 
 > `Step-5` : Widget input `TextField`
+
 - hapus semua attribut `color` (contoh: `color: Colors.green,`)
 - ubah widget `Text` dengan `TextField`
+
 ```dart
 child: TextField(
     controller: txtpanjang,
@@ -103,6 +106,7 @@ child: TextField(
     decoration: InputDecoration(hintText: 'Input Panjang'),
 ),
 ```
+
 > berikut kode `return Center`
 
 ![a](/step1.png)
