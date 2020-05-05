@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
 ```
 
 > `Step-3` : Membuat Layout Container, RaisedButton
-- ubah `return Center` pada `step-2`
+> ubah `return Center` pada `step-2`
 
 ```dart
 return Center(
@@ -73,6 +73,7 @@ return Center(
         ]),
 );
 ```
+
 > `Step-4` : Deklarasi `variabel` dan `fungsi` klik Button Hitung
 
 ```dart
