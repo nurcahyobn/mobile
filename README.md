@@ -1,37 +1,110 @@
-## Welcome to GitHub Pages
+# Program Aritmatika
 
-You can use the [editor on GitHub](https://github.com/nurcahyobn/mobile/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+> `Step-1` : Membuat Layout `StatelessWidget`
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```dart
+import 'package:flutter/material.dart';
 
-### Markdown
+void main() => runApp(App09());
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+class App09 extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Program Persegi Panjang',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Nurcahyo (KELAS)'),
+        ),
+        body: Text("Step-1"),
+      ),
+    );
+  }
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+> `Step-2` : Membuat Layout `StatefulWidget`
+- ubah kode `body: MyApp(),`
+- tambah perintah dibawah untuk `class MyApp()`
+  
+```dart
+class MyApp extends StatefulWidget {
+  _MyAppState createState() => _MyAppState();
+}
 
-### Jekyll Themes
+class _MyAppState extends State<MyApp> {
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("Step-2"),
+    );
+  }
+}
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nurcahyobn/mobile/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+> `Step-3` : Membuat Layout Container, RaisedButton
+- ubah `return Center` pada `step-2`
+```dart
+return Center(
+    child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+        Container(
+            width: 280,
+            padding: EdgeInsets.all(10.0),
+            color: Colors.yellow,
+            child: Text("Input panjang"),
+        ),
+        Container(
+            width: 280,
+            padding: EdgeInsets.all(10.0),
+            color: Colors.green,
+            child: Text("Input lebar"),
+        ),
+        RaisedButton(
+            child: Text('Hitung Luas'), 
+            onPressed: () {},
+        ),
+        Container(
+            width: 280,
+            padding: EdgeInsets.all(10.0),
+            color: Colors.green,
+            child: Text("Luas Persegi"),
+        ),
+        ]),
+);
+```
+> `Step-4` : Deklarasi `variabel` dan `fungsi` klik Button Hitung
+```dart
+class _MyAppState extends State<MyApp> {
+  final txtpanjang = TextEditingController();
+  final txtlebar = TextEditingController();
 
-### Support or Contact
+  String hasil = '';
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+  onHitung() {
+    setState(() {
+      var panjang = int.parse(txtpanjang.text);
+      var lebar = int.parse(txtlebar.text);
+      var luas = panjang * lebar;
+      hasil = luas.toString();
+    });
+  }
+
+  Widget build(BuildContext context) {
+  ...
+```
+
+> `Step-5` : Widget input `TextField`
+- hapus semua attribut `color` (contoh: `color: Colors.green,`)
+- ubah widget `Text` dengan `TextField`
+```dart
+child: TextField(
+    controller: txtpanjang,
+    autocorrect: true,
+    decoration: InputDecoration(hintText: 'Input Panjang'),
+),
+```
+> berikut kode `return Center`
+
+![a](/step1.png)
+
+![a](/step2.png)
