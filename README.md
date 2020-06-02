@@ -42,11 +42,13 @@ class HomePage extends StatelessWidget {
         actions: <Widget>[
             IconButton(
                 icon: Icon(Icons.face),
+                tooltip: 'Mahasiswa',
                 onPressed: () {
                   Navigator.of(context).pushNamed("/mahasiswa");
                 }),
             IconButton(
                 icon: Icon(Icons.account_box),
+                tooltip: 'Dosen',
                 onPressed: () {
                   Navigator.of(context).pushNamed("/dosen");
                 }),
