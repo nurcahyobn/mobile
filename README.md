@@ -54,3 +54,10 @@ class HomePage extends StatelessWidget {
                 }),
           ],
 ```        
+
+> Tugas: 
+
+* title: new Text("HomePage"), #`HomePage` ganti `NAMA Mahasiswa`
+* buat Halaman `Kurikulum` 
+
+![Tampilan Awal](/tugas-nav.gif)
