@@ -24,16 +24,16 @@ class HomePage extends StatelessWidget {
   }
 }
 
-//class Mahasiswa   
+//class MahasiswaPage   
 
-//class Dosen 
+//class DosenPage 
 ```
 
 
 ```dart
     routes: {
-      '/mahasiswa': (BuildContext context) => Mahasiswa(),
-      '/dosen': (BuildContext context) => Dosen(),
+      '/mahasiswa': (BuildContext context) => MahasiswaPage(),
+      '/dosen': (BuildContext context) => DosenPage(),
     },
 ```
 
