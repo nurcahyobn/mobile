@@ -55,9 +55,10 @@ class HomePage extends StatelessWidget {
           ],
 ```        
 
-> Tugas: 
+> Quis: 
 
 * title: new Text("HomePage"), #`HomePage` ganti `NAMA Mahasiswa`
-* buat Halaman `Kurikulum` 
+* Halaman `Mahasiswa` : data Mahasiswa menggunakan ListView (Pert-14)
+* Halaman `Dosen` : data Dosen menggunakan ListView (Pert-14)
 
 ![Tampilan Awal](/tugas-nav.gif)
