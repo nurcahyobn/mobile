@@ -61,4 +61,4 @@ class HomePage extends StatelessWidget {
 * Halaman `Mahasiswa` : data Mahasiswa menggunakan ListView (Pert-14)
 * Halaman `Dosen` : data Dosen menggunakan ListView (Pert-14)
 
-![Tampilan Awal](/tugas-nav.gif)
+![Tampilan Awal](/Quis2-6SIA1.gif)
